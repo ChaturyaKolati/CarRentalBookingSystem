@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Available Cars</h1>
+    <div class="car-grid">
+        <div class="car-card">
+            <img src="car1.avif">
+            <h3>BMW 7Series</h3>
+            <p>₹5000/day</p>
+            <a href="booking.html" class="btn">Book</a>
+        </div>
+
+        <div class="car-card">
+            <img src="car2.avif">
+            <h3>Audi Q7</h3>
+            <p>₹4500/day</p>
+            <a href="booking.html" class="btn">Book</a>
+        </div>
+
+        <div class="car-card">
+            <img src="car3.avif">
+            <h3>Mercedes E-class</h3>
+            <p>₹6000/day</p>
+            <a href="booking.html" class="btn">Book</a>
+        </div>
+
+        <div class="car-card">
+            <img src="car4.avif">
+            <h3>Toyota Vellfire</h3>
+            <p>₹7500/day</p>
+            <a href="booking.html" class="btn">Book</a>
+        </div>
+
+        <div class="car-card">
+            <img src="car5.avif">
+            <h3>Hyundai Exter</h3>
+            <p>₹4500/day</p>
+            <a href="booking.html" class="btn">Book</a>
+        </div>
+
+        <br>
+
+        <div class="search-selection">
+        <input type="text" id="searchCar" placeholder="Search Car">
+        <select id="carType">
+            <option value="all">All Cars</option>
+            <option value="Luxury">Luxury</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+        </select>
+    </div>
+
+    <div class="car-grid" id="carGrid">
+        <div class="car-card" data-type="SUV">
+            <h3>BMW 7Series</h3>
+            <p>₹5000/day</p>
+        </div>
+
+        <div class="car-card" data-type="Luxury">
+            <h3>Audi Q7</h3>
+            <p>₹4500/day</p>
+        </div>
+
+        <div class="car-card" data-type="Sedan">
+            <h3>Mercedes E-class</h3>
+            <p>₹6000/day</p>
+        </div>
+
+        <div class="car-card" data-type="Hatchback">
+            <h3>Toyota Vellfire</h3>
+            <p>₹7500/day</p>
+        </div>
+
+        <div class="car-card" data-type="Convertible">
+            <h3>Hyundai Exter</h3>
+            <p>₹4500/day</p>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
