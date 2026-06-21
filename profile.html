@@ -7,16 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">🚗 Rent Ride</a>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Available Cars</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="history.html" class="bookings-btn">My Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><button id="themeBtn">🌙</button></li>
+        </ul>
+        </nav>
+
     <div class="profile">
         <h2>User Profile</h2>
-        <p>Name: Jane</p>
-        <p>Email: jane@email.com</p>
+        <p><strong>Name:</strong>
+            <span id="profileName"></span></p>
+
+        <p><strong>Email:</strong> 
+            <span id="profileEmail"></span></p>
+
         <h3>Booking History</h3>
         <ul>
             <li>BMW 7Series - Completed</li>
             <li>Audi Q7 - Upcoming</li>
         </ul>
+        <h3>Quick Links</h3>
+            <ul>
+                <li><a href="history.html">View Booking History</a></li>
+                <li><a href="cars.html">Browse Cars</a></li>
+            </ul>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

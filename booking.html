@@ -7,28 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">🚗 Rent Ride</a>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Available Cars</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="history.html" class="bookings-btn">My Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><button id="themeBtn">🌙</button></li>
+        </ul>
+        </nav>
+
+
     <div class="booking-container">
+
         <h2>Book Your Car</h2>
+
         <form id="bookingForm">
-            <input type="text" placeholder="PickUp Location">
-            <input type="date" id="pickupDate">
-            <input type="date" id="returnDate">
+
+            <select id="carName">
+                <option>BMW 7 Series</option>
+                <option>Audi Q7</option>
+                <option>Mercedes E-Class</option>
+                <option>Toyota Vellfire</option>
+                <option>Hyundai Exter</option>
+            </select>
+
+            <input type="text" id="pickupLocation" placeholder="Pickup Location" required>
+
+            <input type="date" id="pickupDate" required>
+
+            <input type="date" id="returnDate" required>
+
+            <label>Upload Driving License</label>
+
+            <input type="file" id="license" accept="image/*,.pdf">
+
+            <img id="preview" width="200">
+
             <button type="submit">Confirm Booking</button>
+
         </form>
+
         <h3 id="totalPrice"></h3>
+        <a href="history.html" class="btn booking-btn">View My Bookings</a>
+
     </div>
-
-    <label>Upload Driving License</label>
-    <input type="file" id="license" accept="image/*,.pdf">
-    <img id="preview" width="200">
-
-    <select id="carName">
-        <option>BMW 7 Series</option>
-        <option>Audi Q7</option>
-        <option>Mercedes E-class</option>
-        <option>Toyota Vellfire</option>
-        <option>Hyundai Exter</option>
-    </select>
     <script src="script.js"></script>
 </body>
 </html>

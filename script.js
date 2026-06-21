@@ -1,24 +1,35 @@
 const form = document.getElementById("bookingForm");
 if(form)
+{
+    form.addEventListener("submit", function(e)
     {
-        form.addEventListener("submit", function(e)
-        {
-            e.preventDefault();
+        e.preventDefault();
 
-let pickup = new Date(document.getElementById("pickupDate").value);
+        let pickup = new Date(document.getElementById("pickupDate").value);
+        let ret = new Date(document.getElementById("returnDate").value);
 
-let ret = new Date(document.getElementById("returnDate").value);
+        let days = (ret - pickup) / (1000 * 60 * 60 * 24);
+        if(days <= 0)
+            {
+                alert("Return date must be after pickup date");
+                return;
+            }
 
-let days = (ret - pickup) / (1000*60*60*24);
+        let pricePerDay = 5000;
+        let total = days * pricePerDay;
+        document.getElementById("totalPrice").innerHTML = "Total Price: ₹" + total;
+        let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-let pricePerDay = 5000;
+        bookings.push(
+            {
+            car: document.getElementById("carName").value,
+            date: document.getElementById("pickupDate").value
+        });
 
-let total = days * pricePerDay;
-
-document.getElementById("totalPrice").innerHTML = "Total Price: ₹" + total;
-
-alert("Booking Successful!");
-});
+        localStorage.setItem("bookings",JSON.stringify(bookings));
+        alert("Booking Successful!");
+        window.location.href = "payment.html";
+    });
 }
 
 
@@ -26,7 +37,7 @@ const searchInput = document.getElementById("searchCar");
 
 const typeFilter = document.getElementById("carType");
 
-if(searchInput)
+if(searchInput && typeFilter)
     {
         searchInput.addEventListener("keyup", filterCars);
         typeFilter.addEventListener("change", filterCars);
@@ -59,7 +70,7 @@ if(license)
         license.addEventListener("change",function()
         {
             const file = this.files[0];
-            if(file)
+            if(file && file.type.startsWith("image/"))
                 {
                     document.getElementById("preview").src = URL.createObjectURL(file);
                 }
@@ -71,7 +82,7 @@ if(license)
 function payNow()
 {
     alert("Payment Successful!");
-    window.location = "profile.html";
+    window.location.href = "history.html";
 }
 
 
@@ -90,29 +101,11 @@ function loadHistory()
             <td>${b.car}</td>
             <td>${b.date}</td>
             <td>Booked</td>
+            <td>₹5000</td>
             </tr>`;
         });
 }
 loadHistory();
-
-
-
-
-form.addEventListener("submit",function(e)
-{
-    e.preventDefault();
-    let car = document.getElementById("carName").value;
-    let pickup = document.getElementById("pickupDate").value;
-    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
-    bookings.push(
-        {
-            car:car,
-            date:pickup
-        });
-localStorage.setItem("bookings",JSON.stringify(bookings));
-alert("Booking Saved");
-});
-
 
 
 
@@ -146,5 +139,27 @@ if(themeBtn)
 
 
 
+const regForm = document.querySelector("form");
+
+if(window.location.pathname.includes("register"))
+{
+    regForm.addEventListener("submit",function()
+    {
+        localStorage.setItem(
+            "username",document.getElementById("name").value
+        );
+
+        localStorage.setItem(
+            "email",document.getElementById("email").value
+        );
+    });
+}
 
 
+
+if(document.getElementById("profileName"))
+{
+    document.getElementById("profileName").innerText = localStorage.getItem("username");
+
+    document.getElementById("profileEmail").innerText = localStorage.getItem("email");
+}

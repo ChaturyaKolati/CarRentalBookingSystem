@@ -7,47 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">Available Cars</h1>
-    <div class="car-grid">
-        <div class="car-card">
-            <img src="car1.avif">
-            <h3>BMW 7Series</h3>
-            <p>₹5000/day</p>
-            <a href="booking.html" class="btn">Book</a>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">🚗 Rent Ride</a>
         </div>
 
-        <div class="car-card">
-            <img src="car2.avif">
-            <h3>Audi Q7</h3>
-            <p>₹4500/day</p>
-            <a href="booking.html" class="btn">Book</a>
-        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Available Cars</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="history.html" class="bookings-btn">My Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><button id="themeBtn">🌙</button></li>
+        </ul>
+        </nav>
 
-        <div class="car-card">
-            <img src="car3.avif">
-            <h3>Mercedes E-class</h3>
-            <p>₹6000/day</p>
-            <a href="booking.html" class="btn">Book</a>
-        </div>
+    <h1 class="page-title">Available Cars</h1>
 
-        <div class="car-card">
-            <img src="car4.avif">
-            <h3>Toyota Vellfire</h3>
-            <p>₹7500/day</p>
-            <a href="booking.html" class="btn">Book</a>
-        </div>
-
-        <div class="car-card">
-            <img src="car5.avif">
-            <h3>Hyundai Exter</h3>
-            <p>₹4500/day</p>
-            <a href="booking.html" class="btn">Book</a>
-        </div>
-
-        <br>
-
-        <div class="search-selection">
+    <div class="search-section">
         <input type="text" id="searchCar" placeholder="Search Car">
+
         <select id="carType">
             <option value="all">All Cars</option>
             <option value="Luxury">Luxury</option>
@@ -57,35 +37,58 @@
     </div>
 
     <div class="car-grid" id="carGrid">
-        <div class="car-card" data-type="SUV">
-            <h3>BMW 7Series</h3>
-            <p>₹5000/day</p>
-        </div>
 
         <div class="car-card" data-type="Luxury">
-            <h3>Audi Q7</h3>
-            <p>₹4500/day</p>
+            <img src="car1.avif" alt="BMW 7 Series">
+
+            <div class="content">
+                <h3>BMW 7 Series</h3>
+                <p>₹5000/day</p>
+                <a href="booking.html" class="btn">Book</a>
+            </div>
+        </div>
+
+        <div class="car-card" data-type="SUV">
+            <img src="car2.avif" alt="Audi Q7">
+
+            <div class="content">
+                <h3>Audi Q7</h3>
+                <p>₹4500/day</p>
+                <a href="booking.html" class="btn">Book</a>
+            </div>
         </div>
 
         <div class="car-card" data-type="Sedan">
-            <h3>Mercedes E-class</h3>
-            <p>₹6000/day</p>
+            <img src="car3.avif" alt="Mercedes E-Class">
+
+            <div class="content">
+                <h3>Mercedes E-Class</h3>
+                <p>₹6000/day</p>
+                <a href="booking.html" class="btn">Book</a>
+            </div>
         </div>
 
-        <div class="car-card" data-type="Hatchback">
-            <h3>Toyota Vellfire</h3>
-            <p>₹7500/day</p>
+        <div class="car-card" data-type="Luxury">
+            <img src="car4.avif" alt="Toyota Vellfire">
+
+            <div class="content">
+                <h3>Toyota Vellfire</h3>
+                <p>₹7500/day</p>
+                <a href="booking.html" class="btn">Book</a>
+            </div>
         </div>
 
-        <div class="car-card" data-type="Convertible">
-            <h3>Hyundai Exter</h3>
-            <p>₹4500/day</p>
+        <div class="car-card" data-type="SUV">
+            <img src="car5.avif" alt="Hyundai Exter">
+
+            <div class="content">
+                <h3>Hyundai Exter</h3>
+                <p>₹4500/day</p>
+                <a href="booking.html" class="btn">Book</a>
+            </div>
         </div>
-    
+
     </div>
-
-    </div>
-
     
     <script src="script.js"></script>
 </body>
