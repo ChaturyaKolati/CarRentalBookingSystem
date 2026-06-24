@@ -18,6 +18,9 @@ nav
     padding: 18px 60px;
     text-decoration: none;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav ul
 {
@@ -35,7 +38,7 @@ nav ul li a
 {
     color: white;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     transition: 0.3s;
 }
@@ -45,7 +48,7 @@ nav ul li a:hover
 }
 .logo
 {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: bold;
     color: white;
 }
@@ -75,12 +78,14 @@ nav ul li a:hover
     font-size:55px;
     margin-top: 120px;
     margin-bottom:15px;
+    letter-spacing: 1px;
     text-shadow:2px 2px 10px rgba(0,0,0,0.7);
 }
 .hero p
 {
     font-size:22px;
     margin-bottom:25px;
+    line-height: 1.6;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
     max-width:600px;
 }
@@ -222,9 +227,41 @@ button:hover
     padding: 8px 15px;
     border-radius: 6px;
 }
+.car-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.car-buttons button{
+    width: 180px;
+}
 .bookings-btn:hover
 {
     background: #e65c00;
+}
+.booked 
+{
+    color: green;
+    font-weight: bold;
+}
+.manage-buttons
+{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.manage-buttons button
+{
+    flex:1;
+}
+
+.cancelled 
+{
+    color: red;
+    font-weight: bold;
 }
 .form-container
 {
@@ -325,7 +362,8 @@ button:hover
 }
 .dashboard .card
 {
-    width: 250px;
+    width: 280px;
+    min-height: 170px;
     background: white;
     padding: 25px;
     text-align: center;
@@ -338,9 +376,15 @@ button:hover
     color: #002366;
     margin-bottom: 10px;
 }
-.dashboard .card:hover
+/* .dashboard .card:hover
 {
     transform:translateY(-5px);
+} */
+.dashboard .card a
+{
+    text-decoration: none;
+    color: #002366;
+    font-weight: bold;
 }
 table
 {
@@ -365,6 +409,58 @@ table tr:nth-child(even)
 {
     background: #f4f4f4;
 }
+
+table button
+{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #002366;
+    color: white;
+    cursor: pointer;
+}
+
+table button:hover
+{
+    background: #00184d;
+}
+
+table tr:hover
+{
+    background:#eaf2ff;
+}
+
+.status-booked
+{
+    color:green;
+    font-weight:bold;
+}
+
+.status-pending
+{
+    color:orange;
+    font-weight:bold;
+}
+
+.status-completed
+{
+    color:blue;
+    font-weight:bold;
+}
+
+/* table{
+    width: 90%;
+    margin: 30px auto;
+}
+
+.booking-container{
+    max-width: 500px;
+    margin: 30px auto;
+} */
+
+
+
+
 #preview
 {
     display: block;
@@ -375,7 +471,7 @@ table tr:nth-child(even)
 }
 .profile
 {
-    width: 600px;
+    max-width: 600px;
     margin: 50px auto;
     background: white;
     padding: 30px;
@@ -428,6 +524,24 @@ footer
     margin-top: 50px;
 }
 
+footer a
+{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer p
+{
+    margin-top: 8px;
+}
+
+footer a:hover
+{
+    color: #ff6600;
+}
+
 .reviews
 {
     display: flex;
@@ -457,6 +571,23 @@ footer
     font-size: 18px;
 }
 
+.history-actions
+{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px;
+}
+
+#totalPrice
+{
+    text-align:center;
+    color:#002366;
+    margin-top:15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
 #themeBtn
 {
     width: 45px;
@@ -468,6 +599,15 @@ footer
     cursor: pointer;
     margin-left: 20px;
 }
+
+#bookingSummary
+{
+    margin-top:15px;
+    padding:15px;
+    background:#f4f4f4;
+    border-radius:8px;
+}
+
 html
 {
     scroll-behavior:smooth;
@@ -559,7 +699,10 @@ html
 {
     color: white !important;
 }
-
+.dark .dashboard .card a
+{
+    color: white;
+}
 .dark .car-card
 {
     background: #1f1f1f;
@@ -583,6 +726,11 @@ html
 .dark table tr
 {
     background: #1f1f1f;
+}
+
+.dark table tr:hover
+{
+    background:#333;
 }
 
 .dark table tr:nth-child(even)
@@ -614,6 +762,12 @@ html
     color: white;
 }
 
+.dark #bookingSummary
+{
+    background:#1f1f1f;
+    color:white;
+}
+
 /* .dark .review-card
 {
     color: #ffd700;
@@ -624,6 +778,8 @@ html
     color: white;
 } */
 
+
+
 .card
 {
     transition:0.3s;
@@ -631,7 +787,7 @@ html
 
 .card:hover
 {
-    transform:translateY(-8px);
+    transform:translateY(-5px);
 }
 
 @media(max-width:768px)

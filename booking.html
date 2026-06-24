@@ -40,13 +40,15 @@
 
             <input type="text" id="pickupLocation" placeholder="Pickup Location" required>
 
+            <input type="text" id="returnLocation" placeholder="Return Location">
+
             <input type="date" id="pickupDate" required>
 
             <input type="date" id="returnDate" required>
 
             <label>Upload Driving License</label>
 
-            <input type="file" id="license" accept="image/*,.pdf">
+            <input type="file" id="license" accept="image/*,.pdf" required>
 
             <img id="preview" width="200">
 
@@ -55,9 +57,13 @@
         </form>
 
         <h3 id="totalPrice"></h3>
+        <!-- <div id="bookingSummary"></div> -->
         <a href="history.html" class="btn booking-btn">View My Bookings</a>
 
     </div>
+    <footer>
+    <p>© 2026 Rent Ride. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

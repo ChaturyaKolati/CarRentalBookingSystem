@@ -34,61 +34,84 @@
             <option value="SUV">SUV</option>
             <option value="Sedan">Sedan</option>
         </select>
+
+        <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="5000">₹5000 & Below</option>
+            <option value="7000">₹7000 & Below</option>
+        </select>
+
+        <select id="availabilityFilter">
+            <option value="all">All Status</option>
+            <option value="Available">Available</option>
+            <option value="Booked">Booked</option>
+        </select>
+
     </div>
 
     <div class="car-grid" id="carGrid">
 
-        <div class="car-card" data-type="Luxury">
+        <div class="car-card" data-type="Luxury" data-price="5000" data-status="Available">
             <img src="car1.avif" alt="BMW 7 Series">
 
             <div class="content">
-                <h3>BMW 7 Series</h3>
+                <h3>BMW 7Series</h3>
                 <p>₹5000/day</p>
-                <a href="booking.html" class="btn">Book</a>
+                <p>Status: Available</p>
+                <a href="booking.html?car=BMW 7Series" class="btn">Book</a>
             </div>
         </div>
 
-        <div class="car-card" data-type="SUV">
+        <div class="car-card" data-type="SUV" data-price="4500" data-status="Available">
             <img src="car2.avif" alt="Audi Q7">
 
             <div class="content">
                 <h3>Audi Q7</h3>
                 <p>₹4500/day</p>
-                <a href="booking.html" class="btn">Book</a>
+                <p>Status: Available</p>
+                <a href="booking.html?car=Audi Q7" class="btn">Book</a>
             </div>
         </div>
 
-        <div class="car-card" data-type="Sedan">
+        <div class="car-card" data-type="Sedan" data-price="6000" data-status="Available">
             <img src="car3.avif" alt="Mercedes E-Class">
 
             <div class="content">
                 <h3>Mercedes E-Class</h3>
                 <p>₹6000/day</p>
-                <a href="booking.html" class="btn">Book</a>
+                <p>Status: Available</p>
+                <a href="booking.html?car=Mercedes E-Class" class="btn">Book</a>
             </div>
         </div>
 
-        <div class="car-card" data-type="Luxury">
+        <div class="car-card" data-type="Luxury" data-price="7500" data-status="Booked">
             <img src="car4.avif" alt="Toyota Vellfire">
 
             <div class="content">
                 <h3>Toyota Vellfire</h3>
                 <p>₹7500/day</p>
-                <a href="booking.html" class="btn">Book</a>
+                <p>Status: Available</p>
+                <a href="booking.html?car=Toyota Vellfire" class="btn">Book</a>
             </div>
         </div>
 
-        <div class="car-card" data-type="SUV">
+        <div class="car-card" data-type="SUV" data-price="4500" data-status="Available">
             <img src="car5.avif" alt="Hyundai Exter">
 
             <div class="content">
                 <h3>Hyundai Exter</h3>
                 <p>₹4500/day</p>
-                <a href="booking.html" class="btn">Book</a>
+                <p>Status: Available</p>
+                <a href="booking.html?car=Hyundai Exter" class="btn">Book</a>
             </div>
         </div>
 
     </div>
+    <footer>
+    <p>© 2026 Rent Ride. All Rights Reserved.</p>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    </footer>
     
     <script src="script.js"></script>
 </body>

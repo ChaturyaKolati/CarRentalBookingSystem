@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+    <div class="logo">
+        <a href="index.html">🚗 Rent Ride</a>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Available Cars</a></li>
+        <li><a href="managebookings.html">Manage Bookings</a></li>
+        <li><button id="themeBtn">🌙</button></li>
+    </ul>
+    </nav>
     <h1 class="page-title">Admin Dashboard</h1>
 
     <div class="dashboard">
@@ -14,16 +26,6 @@
         <div class="card">
             <h2>12</h2>
             <p>Total Cars</p>
-        </div>
-
-        <div class="card">
-            <h2>₹5,000</h2>
-            <p>Revenue</p>
-        </div>
-
-        <div class="card">
-            <h2>12</h2>
-            <p>Cars Available</p>
         </div>
 
         <div class="card">
@@ -41,7 +43,24 @@
             <p>Total Revenue</p>
         </div>
 
+        <div class="card">
+            <a href="managecars.html" class="btn">Manage Cars</a>
+        </div>
+
+        <div class="card">
+            <a href="managebookings.html" class="btn">Manage Bookings</a>
+        </div>
+
+        <div class="card">
+            <h2 id="availableCars">12</h2>
+            <p>Available Cars</p>
+        </div>
+
+        <div class="card">
+            <a href="index.html" class="btn">Back to Website</a>
+        </div>
     </div>
+    
     <footer>
     <p>© 2026 Rent Ride. All Rights Reserved.</p>
     </footer>

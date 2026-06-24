@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <div class="logo">
+        <a href="index.html">🚗 Rent Ride</a>
+    </div>
+
+    <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="managebookings.html">Bookings</a></li>
+        <li><button id="themeBtn">🌙</button></li>
+    </ul>
+    </nav>
+    <h1 class="page-title">Manage Cars</h1>
+
+    <div class="booking-container">
+
+        <input type="text" id="carNameInput" placeholder="Car Name">
+
+        <select id="carTypeInput">
+            <option value="Luxury">Luxury</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Hatchback">Hatchback</option>
+        </select>
+
+        <div class="car-buttons">
+            <button onclick="addCar()">Add Car</button>
+            <button onclick="removeCar()">Delete</button>
+        </div>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+            <th>Car Name</th>
+            <th>Type</th>
+            <th>Action</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+
+        <tbody id="carTable"></tbody>
+    </table>
+
+    <div style="text-align:center; margin:20px;">
+        <a href="admin.html" class="btn">Back to Admin</a>
+    </div>
+
+    <footer>
+    <p>© 2026 Rent Ride. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

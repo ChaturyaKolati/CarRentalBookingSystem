@@ -7,14 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
+    <nav>
+        <div class="logo">
+            <a href="index.html">🚗 Rent Ride</a>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Available Cars</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="history.html" class="bookings-btn">My Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><button id="themeBtn">🌙</button></li>
+        </ul>
+        </nav>
+    <form>
+        <div class="form-container">
         <h2>Payment</h2>
-        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="Card Number" maxlength="16" required>
         <input type="text" placeholder="Card Holder Name" required>
         <input type="month" required>
         <input type="password" placeholder="CVV" maxlength="3" required>
         <button type="button" onclick="payNow()">Pay Now</button>
     </div>
+    </form>
+    <footer>
+    <p>© 2026 Rent Ride. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

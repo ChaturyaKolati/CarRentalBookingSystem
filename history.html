@@ -7,16 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- <a href="index.html" class="btn">← Back to Home</a> -->
+     <nav>
+        <div class="logo">
+            <a href="index.html">🚗 Rent Ride</a>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Available Cars</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="history.html" class="bookings-btn">My Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><button id="themeBtn">🌙</button></li>
+        </ul>
+        </nav>
+    <div class="history-actions">
+        <a href="index.html" class="btn">🏠 Home</a>
+        <a href="cars.html" class="btn">🚗 Browse Cars</a>
+    </div>
     <h1 class="page-title">Booking History</h1>
+
+    <div class="search-section">
+    <input type="text" id="historySearch" placeholder="Search Booking">
+    </div>
+
     <table>
-        <tr>
+        <thead>
+            <tr>
             <th>Car</th>
-            <th>Pickup</th>
+            <th>Date</th>
             <th>Status</th>
-            <th>Price</th>
+            <th>Action</th>
         </tr>
+        </thead>
         <tbody id="historyTable"></tbody>
     </table>
+    <footer>
+    <p>© 2026 Rent Ride. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
